@@ -1,5 +1,7 @@
 {
   "current": {
+    "color_primary": "#fff",
+    "color_button_text": "#424242",
     "checkout_sidebar_background_color": "#f3f4f3",
     "checkout_heading_font": "Helvetica Neue",
     "checkout_body_font": "Helvetica Neue",
@@ -34,10 +36,10 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/Header_Banner_72ac331b-afe7-40bb-b000-ea05f62599ce.png",
               "alignment": "center center",
-              "title": "Tell your story now",
-              "buttonText": "",
+              "title": "CO-CREATE YOUR OWN JEWELRY WATCH",
+              "buttonText": "Shop our DÉJÀ UNIQUES",
               "buttonUrl": "",
-              "button": "Slide title",
+              "button": "",
               "cta": "View more",
               "cta_link": ""
             }
