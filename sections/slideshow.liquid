@@ -116,11 +116,16 @@
                     {{ block.settings.title | escape }}
                   </h2>
                 {%- endif -%}
-                {%- if show_center_cta and block.settings.cta_link != blank -%}
-                  <a href="{{ block.settings.cta_link }}" class="slideshow__heading-cta btn{% if section.blocks.size == 1 and section.settings.slider_height == 'adapt' %} small--hide{% endif %}">
-                    {{ block.settings.cta | escape }}
-                  </a>
-                {%- endif -%}
+                {%- if block.settings.buttonText != blank -%}
+                    <a href="{{ block.settings.buttonURL}}" class="btn btn--primary">{{ block.settings.buttonText}}</a>
+                {% endif %} 
+                {% comment %}
+                  {%- if show_center_cta and block.settings.cta_link != blank -%}
+                    <a href="{{ block.settings.cta_link }}" class="slideshow__heading-cta btn{% if section.blocks.size == 1 and section.settings.slider_height == 'adapt' %} small--hide{% endif %}">
+                      {{ block.settings.cta | escape }}
+                    </a>
+                  {%- endif -%}
+                {% endcomment %}
               </div>
             </div>
           </li>
@@ -138,10 +143,12 @@
       <div class="slideshow__buttons critical-hide" data-count="{{ section.blocks.size }}">
         {%- for block in section.blocks -%}
           <div class="slideshow__button slideshow__button--{{ section.blocks.size }}{% if block.settings.cta_link != blank %} slideshow__button--link{% endif %}">
+            {% comment %}
             <button class="slideshow__button-label text-title btn--clear">
               <span class="visually-hidden">{{ 'sections.slider.slide' | t: number: forloop.index }}</span>
-              <span class="slideshow__button-label-text">{{ block.settings.button }}</span>
+              <!-- <span class="slideshow__button-label-text">{{ block.settings.button }}</span> -->
             </button>
+            {% endcomment %}
             {%- unless section.settings.center_cta -%}
               {%- if block.settings.cta_link != blank -%}
                 <a href="{{ block.settings.cta_link }}" class="slideshow__button-cta slideshow__button-cta--multiple medium-up--hide btn" tabindex="-1">
@@ -1000,6 +1007,16 @@
         },
         {
           "type": "text",
+          "id": "buttonText",
+          "label": "Enter button text"
+        },
+        {
+          "type": "url",
+          "id": "buttonUrl",
+          "label": "Select button URL"
+        },
+        {
+          "type": "text",
           "id": "button",
           "label": {
             "cs": "Nadpis snímku",
@@ -1377,79 +1394,6 @@
             "vi": "Video bản trình chiếu",
             "zh-CN": "幻灯片放映视频",
             "zh-TW": "素材輪播影片"
-          }
-        },
-        {
-          "type": "text",
-          "id": "button",
-          "label": {
-            "cs": "Nadpis snímku",
-            "da": "Titel på dias",
-            "de": "Folientitel",
-            "en": "Slide title",
-            "es": "Título de diapositiva",
-            "fi": "Dian otsikko",
-            "fr": "Titre de la diapositive",
-            "it": "Titolo slide",
-            "ja": "スライドタイトル",
-            "ko": "슬라이드",
-            "nb": "Tittel på lysbilde",
-            "nl": "Diatitel",
-            "pl": "Tytuł slajdu",
-            "pt-BR": "Título do slide",
-            "pt-PT": "Título do diapositivo",
-            "sv": "Bildspelstitel",
-            "th": "ชื่อสไลด์",
-            "tr": "Slayt başlığı",
-            "vi": "Tiêu đề trang chiếu",
-            "zh-CN": "幻灯片标题",
-            "zh-TW": "投影片標題"
-          },
-          "default": {
-            "cs": "Nadpis snímku",
-            "da": "Titel på dias",
-            "de": "Folientitel",
-            "en": "Slide title",
-            "es": "Título de diapositiva",
-            "fi": "Dian otsikko",
-            "fr": "Titre de la diapositive",
-            "it": "Titolo slide",
-            "ja": "スライドタイトル",
-            "ko": "슬라이드 제목",
-            "nb": "Tittel på lysbilde",
-            "nl": "Diatitel",
-            "pl": "Tytuł slajdu",
-            "pt-BR": "Título do slide",
-            "pt-PT": "Título do diapositivo",
-            "sv": "Bildspelstitel",
-            "th": "ชื่อสไลด์",
-            "tr": "Slayt başlığı",
-            "vi": "Tiêu đề trang chiếu",
-            "zh-CN": "幻灯片标题",
-            "zh-TW": "投影片標題"
-          },
-          "info": {
-            "cs": "Zobrazí se jen v případě, že v prezentaci nastavíte více než jeden snímek.",
-            "da": "Vises kun, hvis du indstiller mere end én dias i diasshowet",
-            "de": "Wird nur angezeigt, wenn der Präsentation mehrere Folien hinzugefügt werden",
-            "en": "Only shows if you set more than one slide in the slideshow",
-            "es": "Solo se muestra si configuras más de una diapositiva en la presentación de diapositivas",
-            "fi": "Näytetään vain, jos olet asettanut diaesitykseen useamman kuin yhden dian",
-            "fr": "Ne s'affiche que si vous avez défini plusieurs diapositives dans le diaporama",
-            "it": "Appare solo se imposti più di una slide nella presentazione",
-            "ja": "スライドショーに複数のスライドを設定した場合のみ表示されます。",
-            "ko": "슬라이드 쇼에 슬라이드를 두 개 이상 설정 한 경우에만 표시됩니다.",
-            "nb": "Vises bare hvis du angir mer enn et lysbilde i lysbildefremvisningen",
-            "nl": "Wordt alleen weergegeven als je meer dan één dia instelt in de diavoorstelling",
-            "pl": "Wyświetla się tylko, jeżeli w pokazie slajdów ustawiono więcej niż jeden slajd",
-            "pt-BR": "Aparece apenas se você definir mais de um slide na apresentação de slides",
-            "pt-PT": "Apenas visível quando define mais do que um diapositivo na apresentação de diapositivos",
-            "sv": "Visar bara om du ställer in mer än en bild i bildspelet",
-            "th": "แสดงเฉพาะเมื่อคุณตั้งค่ามากกว่าหนึ่งสไลด์ในสไลด์โชว์",
-            "tr": "Slayt gösterisinde birden fazla slayt oluşturduğunuzda görünür",
-            "vi": "Chỉ hiển thị nếu bạn đặt nhiều trang chiếu trong bản trình chiếu",
-            "zh-CN": "仅当您在幻灯片放映中设置了多张幻灯片时显示",
-            "zh-TW": "如果您在素材輪播內設定多張投影片才會顯示此項目"
           }
         },
         {

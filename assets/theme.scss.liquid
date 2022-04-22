@@ -705,6 +705,9 @@ h5,
 h6 {
   color: $color-heading-text;
   margin: 0 0 $gutter;
+  background: -webkit-linear-gradient(180deg, #424242 0%, #B1B1B1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
   a {
     color: inherit;
@@ -732,13 +735,13 @@ h6 {
 }
 
 h1 {
-  @include media-query($small) {
-    font-size: rem(34);
+  @include media-query($medium-up) {
+    font-size: 4rem;
     line-height: line-height(42, 34);
   }
 
-  @include media-query($medium-up) {
-    font-size: rem(60);
+  @include media-query($small) {
+    font-size: rem(30);
     line-height: line-height(72, 60);
   }
 }
@@ -1698,7 +1701,6 @@ a[href^="tel"] {
   position: relative;
   width: auto;
   background-color: $color-button;
-  border-radius: 0;
   color: $color-button-text;
   border: 2px solid $color-button;
   font-size: rem(12);
@@ -1713,18 +1715,20 @@ a[href^="tel"] {
   cursor: pointer;
   transition: $button-transition;
   box-sizing: border-box;
+  border-radius: 10px !important;
 
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    outline: 2px solid $color-button;
-    transition: $button-transition;
-  }
+
+  // &::after {
+  //   content: "";
+  //   display: block;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   outline: 2px solid $color-button;
+  //   transition: $button-transition;
+  // }
 
   &:not(.disabled):hover::after {
     outline: 4px solid $color-primary;
@@ -6175,7 +6179,7 @@ $button-size: 30px;
 }
 
 .slideshow__text-container {
-  text-align: center;
+  text-align: right;
   position: absolute;
   top: 50%;
   left: 0;
@@ -6224,7 +6228,7 @@ $button-size: 30px;
 
 .slideshow__heading {
   display: none;
-  margin: 0 auto;
+  color: linear-gradient(180deg, #424242 0%, #B1B1B1 100%) 0% 0% no-repeat;
 
   .slideshow--full &,
   .slideshow--adapt .slideshow__text-content-mobile & {
@@ -6233,7 +6237,9 @@ $button-size: 30px;
 
   @include media-query($medium-up) {
     display: block;
-    max-width: 800px;
+    max-width: 30%;
+    margin-left: auto;
+    
   }
 }
 
@@ -6416,6 +6422,7 @@ $button-size: 30px;
 
 .slideshow__button-label {
   color: $color-heading-text;
+  border: 1px solid #D6D6D6;
 
   @include media-query($medium-up) {
     padding: $gutter ($gutter * 2);
@@ -9183,7 +9190,7 @@ shopify-payment-terms {
       position: absolute;
       left: 0;
       bottom: 2px;
-      border-bottom: 1px solid currentColor;
+      border-bottom: 1px solid currentColor; 
     }
   }
 
@@ -9205,3 +9212,10 @@ shopify-payment-terms {
   }
 }
 
+
+
+// MEHDI UPDATES 
+
+.btn--primary {
+  letter-spacing: 4.8px;
+}

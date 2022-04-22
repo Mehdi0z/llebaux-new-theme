@@ -1,11 +1,11 @@
 [
   {
     "name": "theme_info",
-    "theme_name": "Narrative",
+    "theme_name": "Llebaux Custom Theme",
     "theme_author": "Shopify",
-    "theme_version": "10.6.1",
-    "theme_documentation_url": "https:\/\/help.shopify.com\/manual\/using-themes\/themes-by-shopify\/narrative",
-    "theme_support_url": "https:\/\/support.shopify.com\/"
+    "theme_version": "0",
+    "theme_documentation_url": "https://llebauxofficial.com",
+    "theme_support_url": "https://llebauxofficial.com"
   },
   {
     "name": {
@@ -597,7 +597,7 @@
           "vi": "Toàn cầu",
           "zh-CN": "全球",
           "zh-TW": "全球"
-        }
+        } 
       },
       {
         "type": "select",
@@ -625,10 +625,10 @@
           "zh-CN": "基本尺寸",
           "zh-TW": "基本尺寸"
         },
-        "default": "62.5%",
+        "default": "16px",
         "options": [
           {
-            "value": "50%",
+            "value": "14px",
             "label": {
               "cs": "Malá",
               "da": "Lille",
@@ -654,7 +654,7 @@
             }
           },
           {
-            "value": "62.5%",
+            "value": "16px",
             "label": {
               "cs": "Střední",
               "da": "Medium",
@@ -680,7 +680,7 @@
             }
           },
           {
-            "value": "75%",
+            "value": "18px",
             "label": {
               "cs": "Velká",
               "da": "Stor",
