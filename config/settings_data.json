@@ -13,19 +13,20 @@
         "type": "header",
         "settings": {
           "icon": "cart",
+          "logo": "shopify:\/\/shop_images\/Logo_Llebaux.png",
           "logo_max_height": 15,
           "enable_transparent": true,
           "transparent_text_color": "#ffffff",
           "primary_navigation": "main-menu",
           "secondary_navigation": "footer",
-          "show_social_icons": false,
+          "show_social_icons": true,
           "show_announcement": false,
           "home_page_only": true,
           "announcement_text": "Announce something here",
           "announcement_link": "",
           "announcement_icon": "checkmark",
           "announcement_color_bg": "#758560",
-          "announcement_color_text": "#fff"
+          "announcement_color_text": "#ffffff"
         }
       },
       "slideshow": {
@@ -72,6 +73,7 @@
       },
       "feature-row-0": {
         "type": "feature-row",
+        "disabled": true,
         "settings": {
           "size": "large",
           "background_color": "#f3f4f3",
@@ -88,6 +90,7 @@
       },
       "video": {
         "type": "video",
+        "disabled": true,
         "settings": {
           "cover_text": "",
           "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
@@ -100,6 +103,7 @@
       },
       "rich-text": {
         "type": "rich-text",
+        "disabled": true,
         "settings": {
           "full_width": false,
           "section_title": "Talk about your brand",
@@ -109,6 +113,7 @@
       },
       "gallery": {
         "type": "gallery",
+        "disabled": true,
         "blocks": {
           "gallery-0": {
             "type": "image",
@@ -153,6 +158,7 @@
       },
       "feature-row-1": {
         "type": "feature-row",
+        "disabled": true,
         "settings": {
           "size": "medium",
           "background_color": "#f3f4f3",
@@ -169,6 +175,7 @@
       },
       "featured-slider": {
         "type": "featured-slider",
+        "disabled": true,
         "blocks": {
           "featured-slide-0": {
             "type": "slide",
@@ -219,6 +226,7 @@
       },
       "featured-product": {
         "type": "featured-product",
+        "disabled": true,
         "settings": {
           "featured_product": "",
           "show_quantity_selector": false,
@@ -229,11 +237,12 @@
           "enable_video_looping": false,
           "layout": "square",
           "media_size": "fill",
-          "background_color": "transparent"
+          "background_color": "rgba(0,0,0,0)"
         }
       },
       "hero": {
         "type": "hero",
+        "disabled": true,
         "settings": {
           "hero_size": "medium",
           "alignment": "center center",
@@ -269,6 +278,14 @@
           "show_newsletter": true,
           "newsletter_heading": "Sign up for updates",
           "newsletter_subheading": "<p>Promotions, new products and sales. Directly to your inbox.<\/p>"
+        }
+      },
+      "search-template": {
+        "type": "search-template",
+        "settings": {
+          "grid_style": "collage",
+          "results": "2",
+          "rows": "4"
         }
       }
     },
