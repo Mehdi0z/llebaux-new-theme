@@ -6225,7 +6225,9 @@ $button-size: 30px;
 
 .slideshow__heading {
   display: none;
-  color: linear-gradient(180deg, #424242 0%, #B1B1B1 100%) 0% 0% no-repeat;
+  background: -webkit-linear-gradient(180deg, #424242 0%, #B1B1B1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
   .slideshow--full &,
   .slideshow--adapt .slideshow__text-content-mobile & {
