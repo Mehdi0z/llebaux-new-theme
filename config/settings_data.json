@@ -295,18 +295,21 @@
       "sections": {
         "header": {
           "type": "header",
-          "settings": {}
+          "settings": {
+          }
         },
         "slideshow": {
           "type": "slideshow",
           "blocks": {
             "slide-0": {
               "type": "image",
-              "settings": {}
+              "settings": {
+              }
             },
             "slide-1": {
               "type": "image",
-              "settings": {}
+              "settings": {
+              }
             }
           },
           "block_order": [
@@ -333,22 +336,26 @@
         },
         "rich-text": {
           "type": "rich-text",
-          "settings": {}
+          "settings": {
+          }
         },
         "gallery": {
           "type": "gallery",
           "blocks": {
             "gallery-0": {
               "type": "image",
-              "settings": {}
+              "settings": {
+              }
             },
             "gallery-1": {
               "type": "image",
-              "settings": {}
+              "settings": {
+              }
             },
             "gallery-2": {
               "type": "image",
-              "settings": {}
+              "settings": {
+              }
             }
           },
           "block_order": [
@@ -419,7 +426,8 @@
           "blocks": {
             "footer-0": {
               "type": "menu",
-              "settings": {}
+              "settings": {
+              }
             }
           },
           "block_order": [
@@ -521,7 +529,8 @@
         },
         "1476381402840": {
           "type": "video",
-          "settings": {}
+          "settings": {
+          }
         },
         "1476381658595": {
           "type": "hero",
@@ -571,11 +580,13 @@
           "blocks": {
             "1478027260401-0": {
               "type": "quote",
-              "settings": {}
+              "settings": {
+              }
             },
             "1478027389453": {
               "type": "quote",
-              "settings": {}
+              "settings": {
+              }
             }
           },
           "block_order": [
@@ -609,19 +620,23 @@
           "blocks": {
             "1486649146314": {
               "type": "image",
-              "settings": {}
+              "settings": {
+              }
             },
             "1486649185448": {
               "type": "image",
-              "settings": {}
+              "settings": {
+              }
             },
             "1486649208703": {
               "type": "image",
-              "settings": {}
+              "settings": {
+              }
             },
             "1486649267624": {
               "type": "image",
-              "settings": {}
+              "settings": {
+              }
             }
           },
           "block_order": [
@@ -642,11 +657,13 @@
           "blocks": {
             "1486649413883-0": {
               "type": "image",
-              "settings": {}
+              "settings": {
+              }
             },
             "1486649413883-1": {
               "type": "image",
-              "settings": {}
+              "settings": {
+              }
             }
           },
           "block_order": [
@@ -823,7 +840,8 @@
           "blocks": {
             "1486583739899": {
               "type": "video",
-              "settings": {}
+              "settings": {
+              }
             }
           },
           "block_order": [
@@ -1143,7 +1161,8 @@
           "blocks": {
             "1486663529263": {
               "type": "video",
-              "settings": {}
+              "settings": {
+              }
             }
           },
           "block_order": [
