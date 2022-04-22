@@ -4,8 +4,8 @@
     "theme_name": "Llebaux Custom Theme",
     "theme_author": "Shopify",
     "theme_version": "0",
-    "theme_documentation_url": "https://llebauxofficial.com",
-    "theme_support_url": "https://llebauxofficial.com"
+    "theme_documentation_url": "https:\/\/llebauxofficial.com",
+    "theme_support_url": "https:\/\/llebauxofficial.com"
   },
   {
     "name": {
@@ -597,7 +597,7 @@
           "vi": "Toàn cầu",
           "zh-CN": "全球",
           "zh-TW": "全球"
-        } 
+        }
       },
       {
         "type": "select",
