@@ -34,6 +34,7 @@
 
   {{ content_for_header }}
 
+  
   {% include 'critical-css' %}
   {% include 'load-css' %}
 
@@ -89,6 +90,17 @@
   <script src="{{ 'vendor.min.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'theme.min.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'custom.js' | asset_url }}" defer="defer"></script>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
+    </style>
+
+
 </head>
 
 <body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{% if request.page_type != blank %}{{ request.page_type | handle }}{% else %}none{% endif %} data-animations">
